@@ -10,6 +10,7 @@
 - Bull Board queue dashboard
 - Google OAuth login
 - Slack integration
+
 Frontend
 
 - React + TypeScript + Vite
@@ -20,17 +21,19 @@ Frontend
 - Slack connect/disconnect
 - Ethereal email preview links
 - Loading, error and success states
+- 
 When emails are scheduled:
 
-The recipient list is parsed in the browser.
-Scheduled email records are stored in PostgreSQL.
-A BullMQ delayed job is created for each email.
-BullMQ keeps the job in Redis until its scheduled time.
-The worker processes the job when it becomes available.
-Redis-based delay and hourly rate limits are checked.
-If allowed, the email is sent through Ethereal SMTP.
-PostgreSQL is updated with the final status and preview URL.
-The email is indexed in Elasticsearch.
+1.The recipient list is parsed in the browser.
+2.Scheduled email records are stored in PostgreSQL.
+3.A BullMQ delayed job is created for each email.
+4.BullMQ keeps the job in Redis until its scheduled time.
+5.The worker processes the job when it becomes available.
+6.Redis-based delay and hourly rate limits are checked.
+7.If allowed, the email is sent through Ethereal SMTP.
+8.PostgreSQL is updated with the final status and preview URL.
+9.The email is indexed in Elasticsearch.
+
 Persistence and restart handling
 
 Scheduled emails are stored in PostgreSQL and queued using BullMQ/Redis. On restart, pending emails are checked and re-queued if necessary.
