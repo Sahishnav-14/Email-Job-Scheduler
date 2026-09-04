@@ -62,7 +62,6 @@ Ethereal is used for test email delivery. Configure the Ethereal SMTP credential
 
 Configure these in .env using .env.example:
 
-```text
 DATABASE_URL
 REDIS_URL
 ELASTICSEARCH_URL
@@ -87,4 +86,4 @@ Redis tracks the hourly email count and send timing. When the hourly limit is re
 
 **Concurrency**
 
-`WORKER_CONCURRENCY` controls how many email jobs the worker processes simultaneously.
+WORKER_CONCURRENCY controls how many email jobs the worker processes simultaneously.
