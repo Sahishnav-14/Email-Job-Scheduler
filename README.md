@@ -48,19 +48,19 @@ Ethereal is used for test email delivery. Configure the Ethereal SMTP credential
 
 **Backend Run**
 
-1. Install dependencies: `npm install`
+1. Install dependencies: npm install
 2. Start PostgreSQL and Redis.
-3. Start backend: `npm run dev:backend`
-4. Start BullMQ worker: `npm run worker --workspace backend`
+3. Start backend: npm run dev:backend
+4. Start BullMQ worker: npm run worker --workspace backend
 
 **Frontend Run**
 
-1. Start frontend: `npm run dev:frontend`
+1. Start frontend: npm run dev:frontend
 2. Open the frontend in the browser.
 
 **Environment Variables**
 
-Configure these in `.env` using `.env.example`:
+Configure these in .env using .env.example:
 
 ```text
 DATABASE_URL
