@@ -40,7 +40,7 @@ Scheduled emails are stored in PostgreSQL and queued using BullMQ/Redis. On rest
 
 **Elasticsearch search**
 
-Emails are indexed in the `emails` Elasticsearch index and can be searched by recipient or subject.
+Emails are indexed in the emails Elasticsearch index and can be searched by recipient or subject.
 
 **Ethereal Email**
 
@@ -63,22 +63,36 @@ Ethereal is used for test email delivery. Configure the Ethereal SMTP credential
 Configure these in .env using .env.example:
 
 DATABASE_URL
+
 REDIS_URL
+
 ELASTICSEARCH_URL
+
 ETHEREAL_HOST
+
 ETHEREAL_PORT
+
 ETHEREAL_USER
+
 ETHEREAL_PASS
+
 GOOGLE_CLIENT_ID
+
 GOOGLE_CLIENT_SECRET
+
 SESSION_SECRET
+
 SLACK_CLIENT_ID
+
 SLACK_CLIENT_SECRET
+
 SLACK_CHANNEL_ID
+
 WORKER_CONCURRENCY
+
 MIN_EMAIL_DELAY_MS
+
 HOURLY_EMAIL_LIMIT
-```
 
 **Rate Limiting**
 
